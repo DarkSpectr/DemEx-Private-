@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище DemEXModelContainer" CdmEntityContainer="DemEXEntities">
+    <EntitySetMapping Name="Material_type_import">
+      <EntityTypeMapping TypeName="DemEXModel.Material_type_import">
+        <MappingFragment StoreEntitySet="Material_type_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeMaterials" ColumnName="TypeMaterials" />
+          <ScalarProperty Name="PercentBrakMaterial" ColumnName="PercentBrakMaterial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partner_products_import">
+      <EntityTypeMapping TypeName="DemEXModel.Partner_products_import">
+        <MappingFragment StoreEntitySet="Partner_products_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDNameProduct" ColumnName="IDNameProduct" />
+          <ScalarProperty Name="IDNamePartner" ColumnName="IDNamePartner" />
+          <ScalarProperty Name="CountProduct" ColumnName="CountProduct" />
+          <ScalarProperty Name="DateSale" ColumnName="DateSale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Partners_import">
+      <EntityTypeMapping TypeName="DemEXModel.Partners_import">
+        <MappingFragment StoreEntitySet="Partners_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDTypePartner" ColumnName="IDTypePartner" />
+          <ScalarProperty Name="NamePartner" ColumnName="NamePartner" />
+          <ScalarProperty Name="Director" ColumnName="Director" />
+          <ScalarProperty Name="EmailPartner" ColumnName="EmailPartner" />
+          <ScalarProperty Name="PhoneNumPartner" ColumnName="PhoneNumPartner" />
+          <ScalarProperty Name="AddressPartner" ColumnName="AddressPartner" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartnerTypes">
+      <EntityTypeMapping TypeName="DemEXModel.PartnerTypes">
+        <MappingFragment StoreEntitySet="PartnerTypes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypePartner" ColumnName="TypePartner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_type_import">
+      <EntityTypeMapping TypeName="DemEXModel.Product_type_import">
+        <MappingFragment StoreEntitySet="Product_type_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TypeProduct" ColumnName="TypeProduct" />
+          <ScalarProperty Name="KoeffTypeProduct" ColumnName="KoeffTypeProduct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products_import">
+      <EntityTypeMapping TypeName="DemEXModel.Products_import">
+        <MappingFragment StoreEntitySet="Products_import">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDTypeProduct" ColumnName="IDTypeProduct" />
+          <ScalarProperty Name="NameProduct" ColumnName="NameProduct" />
+          <ScalarProperty Name="Articul" ColumnName="Articul" />
+          <ScalarProperty Name="MinCostPartner" ColumnName="MinCostPartner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

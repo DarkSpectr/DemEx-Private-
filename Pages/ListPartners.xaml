@@ -1,0 +1,109 @@
+﻿<Page x:Class="DemSerDar.Pages.ListPartners"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DemSerDar.Pages"
+      xmlns:local1="clr-namespace:DemSerDar.Converter"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="ListPartners"
+      FontFamily="Segoe UI"
+      FontSize="12">
+
+    <Page.Resources>
+        <local1:ProcentConverter x:Key="PercentConverter"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#F4E8D3"/>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Image Source="/Images/Мастер_пол.png" 
+                   HorizontalAlignment="Left"
+                   Margin="10" 
+                   Height="60" 
+                   Width="60"/>
+            <TextBlock Text="Мастер пол" 
+                       VerticalAlignment="Center" 
+                       FontSize="30"
+                       FontFamily="Segoe UI" 
+                       FontWeight="SemiBold" 
+                       Margin="10,0,0,0"/>
+            <TextBlock Text="Список партнёров" 
+                       VerticalAlignment="Center" 
+                       Margin="120,0,0,0" 
+                       FontSize="30" 
+                       FontWeight="SemiBold" 
+                       FontFamily="Segoe UI"/>
+        </StackPanel>
+        <ListView x:Name="partnerList" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1">
+                        <StackPanel Margin="10,0,0,0" Width="940">
+                            <StackPanel Grid.Row="0" 
+                                        Margin="20,10,0,0" 
+                                        Orientation="Horizontal" 
+                                        Height="25">
+                                <TextBlock Text="{Binding PartnerTypes.TypePartner}" 
+                                           FontSize="18" 
+                                           FontFamily="Segoe UI" 
+                                           Width="40"/>
+                                <TextBlock Text="|" 
+                                           FontSize="18" 
+                                           FontFamily="Segoe UI" 
+                                           Margin="5,0,5,0" />
+                                <TextBlock Text="{Binding NamePartner}" 
+                                           FontSize="18" 
+                                           FontFamily="Segoe UI" 
+                                           Margin="0,0,5,0"
+                                           Width="170"/>
+                                <TextBlock Text="{Binding ID, Converter={StaticResource PercentConverter}}"
+                                           FontFamily="Segoe UI" 
+                                           FontSize="18" 
+                                           Margin="30,0,0,0"/>
+                            </StackPanel>
+                            <TextBlock Text="{Binding Director}" 
+                                       Height="20" 
+                                       FontSize="14" 
+                                       FontFamily="Segoe UI"
+                                       Margin="20,0,0,0"/>
+                            <TextBlock Text="{Binding PhoneNumPartner}" 
+                                       FontSize="14" 
+                                       FontFamily="Segoe UI"
+                                       Margin="20,0,0,0"/>
+                            <StackPanel Orientation="Horizontal" 
+                                        Margin="20,0,0,10">
+                                <TextBlock Text="Рейтинг: " 
+                                           FontSize="14" 
+                                           FontFamily="Segoe UI" />
+                                <TextBlock Text="{Binding Rate}" 
+                                           FontSize="14"
+                                           FontFamily="Segoe UI"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Border Grid.Row="2" Background="#F4E8D3">
+            <Button Name="GoBackBtn" 
+                    Height="45" 
+                    Width="160" 
+                    Content="В главное меню" 
+                    FontSize="20" 
+                    FontFamily="Segoe UI" 
+                    FontWeight="SemiBold" 
+                    HorizontalAlignment="Left" 
+                    Style="{StaticResource GreenButtonStyle}" 
+                    BorderThickness="0" 
+                    Click="GoBackBtn_Click"
+                    Margin="40,0,0,0"/>
+        </Border>
+    </Grid>
+</Page>
